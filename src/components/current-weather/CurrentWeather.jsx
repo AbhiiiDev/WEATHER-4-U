@@ -22,19 +22,19 @@ export const CurrentWeather = ({data}) => {
           </div>
           <div className="parameter-row">
             <span className="parameter-label">Feels like</span>
-            <span className="parameter-value">22°C</span>
+            <span className="parameter-value">{`${Math.round(data.main.feels_like)}`}°C</span>
           </div>
           <div className="parameter-row">
             <span className="parameter-label">Wind</span>
-            <span className="parameter-value">6km/h</span>
+            <span className="parameter-value">{data.wind.speed}Km/h</span>
           </div>
           <div className="parameter-row">
             <span className="parameter-label">Humidity</span>
-            <span className="parameter-value">60%</span>
+            <span className="parameter-value">{data.main.humidity}%</span>
           </div>
           <div className="parameter-row">
             <span className="parameter-label">Pressure</span>
-            <span className="parameter-value">25%</span>
+            <span className="parameter-value">{data.main.pressure}mbar</span>
           </div>
         </div>
       </div>
